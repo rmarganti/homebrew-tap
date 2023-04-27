@@ -5,20 +5,20 @@
 class Vault2env < Formula
   desc "Sync secrets between Vault and an .env file"
   homepage "https://github.com/rmarganti/vault2env"
-  version "0.1.1"
+  version "1.0.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/rmarganti/vault2env/releases/download/0.1.1/vault2env_Darwin_arm64.tar.gz"
-      sha256 "f0dcba63d894ffd3d5102e6291363c7bfd431f9282e82f7264072467f75d0916"
+    if Hardware::CPU.intel?
+      url "https://github.com/rmarganti/vault2env/releases/download/1.0.0/vault2env_Darwin_x86_64.tar.gz"
+      sha256 "5dc8c6b17b1cae5728d73e528c870b8c1deebf61e08e289871c2d02451a127bd"
 
       def install
         bin.install "vault2env"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/rmarganti/vault2env/releases/download/0.1.1/vault2env_Darwin_x86_64.tar.gz"
-      sha256 "210dbc8e1cf2bec23e6c474fc1f0e2a27542ceab87267fbd4ec7269b7d5941d8"
+    if Hardware::CPU.arm?
+      url "https://github.com/rmarganti/vault2env/releases/download/1.0.0/vault2env_Darwin_arm64.tar.gz"
+      sha256 "6d30d7b3a3fff6170b67e04624e88e4bde126787b770f6f3e84ed3aa2d124f50"
 
       def install
         bin.install "vault2env"
@@ -28,16 +28,16 @@ class Vault2env < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rmarganti/vault2env/releases/download/0.1.1/vault2env_Linux_arm64.tar.gz"
-      sha256 "f55b80f510ccad6ed63dc4f189786356477dddb3903611c5e7eab8ced017e27b"
+      url "https://github.com/rmarganti/vault2env/releases/download/1.0.0/vault2env_Linux_arm64.tar.gz"
+      sha256 "5ae7a4f89d5f9aead89df115963742f948de96866d9022d2f1ffd7d1b12ca648"
 
       def install
         bin.install "vault2env"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rmarganti/vault2env/releases/download/0.1.1/vault2env_Linux_x86_64.tar.gz"
-      sha256 "3ea4c8982bd42fc78840495c9ca7c3c59a26ca0abd73dac0a0af8e96b6b69b4f"
+      url "https://github.com/rmarganti/vault2env/releases/download/1.0.0/vault2env_Linux_x86_64.tar.gz"
+      sha256 "772391d065e417ff7b6359a9bd000349fbb43619f4a62833b74a155083a675f5"
 
       def install
         bin.install "vault2env"
