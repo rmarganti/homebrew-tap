@@ -1,9 +1,9 @@
 class SecretSync < Formula
   desc "Sync secrets between Vault, K8s, and .env files"
   homepage "https://github.com/rmarganti/scrtsync"
-  url "https://github.com/rmarganti/scrtsync/releases/download/v1.2.0/secret-sync-v1.2.0-x86_64-macos.tar.xz"
-  version "1.2.0"
-  sha256 "46a6ff7ae5cb61992eb499f6e482bbdc8b5afbfa06c1a42646aa63653ecbd520"
+  url "https://github.com/rmarganti/scrtsync/releases/download/v1.3.1/secret-sync-v1.3.1-x86_64-macos.tar.xz"
+  version "1.3.1"
+  sha256 "5e7946a53a15f117570754bb8d7d82a94e7eee0d2204805ad2c689e65bf3d88a"
 
   def install
     bin.install "scrtsync"
